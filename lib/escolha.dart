@@ -7,12 +7,16 @@ import 'package:flutter/src/foundation/key.dart';
 
 import './taks.dart';
 
-class Home extends StatelessWidget {
+class Escolha extends StatelessWidget {
   final list = [
     Task(
-      'Edificio 4R',
+      'Laboratórios',
+      '4R',
+    ),
+    Task(
       'Salas 4R',
-      
+      'Salas 4R',
+
     ),
   ];
 
@@ -38,7 +42,7 @@ class Home extends StatelessWidget {
           return ListTile(
               title: Text(list[index].sala),
               subtitle: Text(list[index].description),
-              onTap: () => Navigator.of(context).pushNamed('escolher'));
+              onTap: () => Navigator.of(context).pushNamed(redirecionarSala(index)));
         },
         separatorBuilder: (BuildContext context, int separatorIndex) {
           return Divider();
@@ -47,13 +51,7 @@ class Home extends StatelessWidget {
         itemCount: list.length,
         
       ),
-      
-
-      
-
-
-
-      
+            
   
 /*
 Padding(
@@ -89,3 +87,21 @@ Padding(
   }
 }
 
+
+
+redirecionarSala(int index)  {          //função para escolher entre laboratório ou salas
+
+
+    if (index == 0 ) {
+    
+    return 'second';
+
+
+    } if (index == 1){
+
+      return 'salas';
+    }
+
+
+
+}

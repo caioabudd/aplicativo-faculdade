@@ -1,112 +1,72 @@
 import 'dart:convert';
+import 'package:flutter_application_1/escolha.dart';
 import 'package:flutter_application_1/funcoes.dart';
 import 'package:http/http.dart' as http;
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/paginaSala.dart';
 import './taks.dart';
-
+import 'package:flutter_application_1/funcoes.dart';
+import './funcoes.dart';
 
 final list = [
   Task(
-    'Laboratório Multidisciplinar 1 ',
-    'Clique para entrar nas instruções',
-  ),
-  Task(
-    'Laboratório Multidisciplinar 2 ',
-    'Clique para entrar nas instruções',
-  ),
-  Task(
-    'Laboratório Multidisciplinar 4 ',
-    'Clique para entrar nas instruções',
-  ),
-  Task(
-    'Laboratório Multidisciplinar 5 ',
-    'Clique para entrar nas instruções',
-  ),
-  Task(
-    'Laboratório Multidisciplinar 6 ',
-    'Clique para entrar nas instruções',
-  ),
-  Task(
-    'Laboratório Multidisciplinar 6 ',
-    'Clique para entrar nas instruções',
-  ),
-  Task(
-    'Laboratório Multidisciplinar 7 ',
-    'Clique para entrar nas instruções',
-  ),
-  Task(
-    'Laboratório Multidisciplinar 8 ',
-    'Clique para entrar nas instruções',
-  ),
-  Task(
-    'Laboratório Multidisciplinar 9 ',
+    'Sala 10 ',
     'Clique para entrar nas instruções',
   ),
 ];
 
-class second extends StatefulWidget {
-  second({Key? key}) : super(key: key);
-
+class salas extends StatefulWidget {
+  salas({Key? key}) : super(key: key);
 
   @override
   _MyAppState createState() => _MyAppState();
 }
 
-class _MyAppState extends State<second> {
+class _MyAppState extends State<salas> {
   int _opcaoSelecionada = 0;
 
-  void remove(index) {
-    list.removeAt(index);
-  }
-
+  get result => null;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Center(child: Text("Salas 4R")),
-        actions: [
-          IconButton(
-            onPressed: () {
-              showSearch(
-                context: context,
-                delegate: CustomSearchDelegate(),
-              );
-            },
-            icon: const Icon(Icons.search),
-          ),
-        ],
-      ),
-      body: ListView.separated(
-        itemBuilder: (BuildContext context, int index) {
-          return ListTile(
-              title: Text(list[index].sala),
-              subtitle: Text(list[index].description),
-              onTap: () =>
-                  Navigator.of(context).pushNamed(Funcoes().redirecionar(index)));
-        },
-        separatorBuilder: (BuildContext context, int separatorIndex) {
-          return Divider();
-        },
-        itemCount: list.length,
-      ),
-    );
+        appBar: AppBar(
+          title: Center(child: Text("Salas 4R")),
+
+        ),
+        body: ListView(
+          children: <Widget>[
+            Card(
+                child: ListTile(
+              title: Text('Sala 10'),
+              onTap: () {
+                Navigator.of(context).pushNamed('sala3');
+              },
+            )),
+            Card(
+              child: ListTile(
+                title: Text('sala 11'),
+                onTap: () {
+                Navigator.of(context).pushNamed('sala3');
+                },
+              ),
+            ),
+            Card(
+              child: ListTile(
+                title: Text('sala 12'),
+                onTap: () {
+                Navigator.of(context).pushNamed('sala3');
+                },
+              ),
+            )
+          ],
+        ));
   }
 }
 
-
-
 class CustomSearchDelegate extends SearchDelegate {
   List<String> searchTerms = [
-    'Laboratório Multidisciplinar 1 ',
-    'Laboratório Multidisciplinar 2 ',
-    'Laboratório Multidisciplinar 3 ',
-    'Laboratório Multidisciplinar 4 ',
-    'Laboratório Multidisciplinar 5 ',
-    'Laboratório Multidisciplinar 6 ',
-    'Laboratório Multidisciplinar 7 ',
-    'Laboratório Multidisciplinar 8 ',
-    'Laboratório Multidisciplinar 9 ',
+    'Sala 10 ',
+    'Sala 11 ',
   ];
 
   List<String> Terms = [
@@ -157,8 +117,8 @@ class CustomSearchDelegate extends SearchDelegate {
         var result = matchQuery[index];
         return ListTile(
             title: Text(result),
-            onTap: () =>
-                Navigator.of(context).pushNamed(Funcoes().mudaResultado(result, index)));
+            onTap: () => Navigator.of(context)
+                .pushNamed(Funcoes().mudaResultado(result, index)));
       },
       separatorBuilder: (BuildContext context, int index) {
         return Divider();
@@ -181,8 +141,8 @@ class CustomSearchDelegate extends SearchDelegate {
         var result = matchQuery[index];
         return ListTile(
             title: Text(result),
-            onTap: () =>
-                Navigator.of(context).pushNamed(Funcoes().mudaResultado(result, index)));
+            onTap: () => Navigator.of(context)
+                .pushNamed(Funcoes().mudaResultado(result, index)));
       },
       separatorBuilder: (BuildContext context, int index) {
         return Divider();
@@ -191,3 +151,11 @@ class CustomSearchDelegate extends SearchDelegate {
   }
 }
 
+
+
+
+
+
+
+
+// usar esse código     onTap: () => Navigator.of(context).pushNamed('sala3')),

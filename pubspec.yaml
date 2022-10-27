@@ -39,6 +39,7 @@ dependencies:
   build_runner: 
   firebase_auth:
   provider:
+  carousel_slider: ^4.0.0
   
 
 
@@ -76,10 +77,10 @@ flutter:
   #   - images/a_dot_ham.jpeg
 
   assets:
-   - assets/images/entrada.png
-   - assets/images/sala1.png
-   - assets/images/escada_sala1.png
-   - assets/images/sala2.png
+   - assets/images/
+   
+   
+   
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

@@ -15,3 +15,10 @@ class Imagens {
 
 }
 
+
+class Receber_imagem {
+  String image;
+
+  Receber_imagem(this.image);
+
+}
