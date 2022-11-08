@@ -16,7 +16,7 @@ final list = [
     'Clique para entrar nas instruções',
   ),
   Task(
-    'Laboratório Multidisciplinar 4 ',
+    'Laboratório de Informática 3 ',
     'Clique para entrar nas instruções',
   ),
   Task(
@@ -100,7 +100,7 @@ class CustomSearchDelegate extends SearchDelegate {
   List<String> searchTerms = [
     'Laboratório Multidisciplinar 1 ',
     'Laboratório Multidisciplinar 2 ',
-    'Laboratório Multidisciplinar 3 ',
+    'Laboratório de Informática 3 ',
     'Laboratório Multidisciplinar 4 ',
     'Laboratório Multidisciplinar 5 ',
     'Laboratório Multidisciplinar 6 ',

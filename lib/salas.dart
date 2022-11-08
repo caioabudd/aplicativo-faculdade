@@ -46,7 +46,7 @@ class _MyAppState extends State<salas> {
               child: ListTile(
                 title: Text('sala 11'),
                 onTap: () {
-                Navigator.of(context).pushNamed('sala3');
+                Navigator.of(context).pushNamed('sala4');
                 },
               ),
             ),
@@ -54,10 +54,18 @@ class _MyAppState extends State<salas> {
               child: ListTile(
                 title: Text('sala 12'),
                 onTap: () {
-                Navigator.of(context).pushNamed('sala3');
+                Navigator.of(context).pushNamed('sala5');
                 },
               ),
-            )
+            ),
+            Card(
+              child: ListTile(
+                title: Text('sala 13'),
+                onTap: () {
+                Navigator.of(context).pushNamed('sala6');
+                },
+              ),
+            ),
           ],
         ));
   }

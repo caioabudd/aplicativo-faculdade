@@ -54,6 +54,10 @@ class Main extends StatelessWidget {
         'sala3': (context) => paginaSala3(),
         'escolher': (context) => Escolha(),
         'salas': (context) => salas(),
+        'sala4': (context) => paginaSala4(),
+        'sala5': (context) => paginaSala5(),
+        'sala6': (context) => paginaSala6(),
+        'sala7': (context) => paginaSala7(),    //Laboratório de informática 3
 
         
       

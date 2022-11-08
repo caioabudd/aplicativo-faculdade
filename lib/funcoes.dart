@@ -13,6 +13,9 @@ redirecionar(dynamic index) {
   if (index == 1) {
     return 'sala2';       // sala 2
   }
+  if (index == 2) {
+    return 'sala7';       // sala 2
+  }
   ; 
  }
 
@@ -31,8 +34,12 @@ mudaResultado(dynamic result, int index) {
     
     index = 3;
     return redirecionar(index);
+  } if(result == "Sala 11 ") {
+    index = 4;
+    return redirecionar(index);
   } else {
     return redirecionar(index);
+
   }
   ;
 }
