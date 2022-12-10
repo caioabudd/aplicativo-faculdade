@@ -5,6 +5,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter_application_1/auth_check.dart';
 import 'package:flutter_application_1/auth_service.dart';
 import 'package:flutter_application_1/contact_problema.dart';
+import 'package:flutter_application_1/coodernacoes.dart';
 import 'package:flutter_application_1/lib_pages/teste.dart';
 import 'package:flutter_application_1/salas.dart';
 import 'package:provider/provider.dart';
@@ -58,6 +59,10 @@ class Main extends StatelessWidget {
         'sala5': (context) => paginaSala5(),
         'sala6': (context) => paginaSala6(),
         'sala7': (context) => paginaSala7(),    //Laboratório de informática 3
+        'coordenação': (context) => coodernacoes(),
+        'coordenacaoExatas': (context) => salaCoodernacao(),
+
+
 
         
       

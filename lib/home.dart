@@ -7,7 +7,13 @@ import 'package:flutter/src/foundation/key.dart';
 
 import './taks.dart';
 
-class Home extends StatelessWidget {
+class Home extends StatefulWidget {
+  
+  @override
+  State<Home> createState() => _HomeState();
+}
+
+class _HomeState extends State<Home> {
   final list = [
     Task(
       'Edificio 4R',
@@ -16,6 +22,22 @@ class Home extends StatelessWidget {
     ),
   ];
 
+void _ShowDialog() {
+  showDialog(context: context, builder: (context) {
+    return AlertDialog(
+      title: Text('Aviso'),
+      content: Text('O Aplicativo ainda está em construção.'),
+      actions: [
+        MaterialButton(
+          onPressed: () {
+            Navigator.pop(context);
+          },
+          child: Text('Sair')
+    ),
+    ],
+    );
+  });
+}
 
   @override
   Widget build(BuildContext context) {
@@ -26,13 +48,13 @@ class Home extends StatelessWidget {
         title: Center(child: Text('Escolha o local que você está')),
         actions: [
          IconButton(
-                      
                       icon: Icon(Icons.logout),
                       onPressed: () => context.read<AuthService>().logout()
                       ),
         ],
          
       ),
+
       body: ListView.separated(
         itemBuilder: (BuildContext context, int index) {
           return ListTile(
@@ -47,7 +69,17 @@ class Home extends StatelessWidget {
         itemCount: list.length,
         
       ),
+
+      bottomNavigationBar:
+        IconButton( 
+                icon: Icon(Icons.info),
+                onPressed: _ShowDialog,
+                
+                ),
+
       
+
+     
 
       
 
@@ -83,9 +115,14 @@ Padding(
 
 
     );
+    
 
   
     
   }
 }
+
+
+
+
 

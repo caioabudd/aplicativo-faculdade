@@ -75,4 +75,11 @@ logout() async {
 
    }
 
+recuperarSenha(String email) async{
+  
+
+  
+
+}
+
 }

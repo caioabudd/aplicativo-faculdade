@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/home.dart';
+import './instrucoes.dart';
 
 class paginaSala1 extends StatefulWidget {
   const paginaSala1({super.key});
@@ -35,7 +36,7 @@ class _paginaSala1State extends State<paginaSala1> {
                 padding: EdgeInsets.symmetric(vertical: 60),
                 child: Image.asset(
                   retornaImagem1(contagem), // Aqui retorna a imagem
-                  width: 600,
+                  width: 450,
                 ),
               ),
             ),
@@ -121,143 +122,7 @@ class _paginaSala1State extends State<paginaSala1> {
   }
 
   Widget balls1(int contagem) {
-
-  if (contagem <= -1) {
-    return Padding(
-    padding: EdgeInsets.all(10),
-    child: Row(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: <Widget>[
-        Container(
-          width: 10,
-          height: 10,
-          decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(30), color: Color.fromARGB(255, 39, 109, 238)),
-        ),
-
-          Container(
-          margin: EdgeInsets.all(10),
-          width: 10,
-          height: 10,
-          decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(30), color: Colors.black),
-        ),
-
-          Container(
-          width: 10,
-          height: 10,
-          decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(30), color: Colors.black),
-
-        ),
-       
-      ],
-    ),
-  );
-  } if(contagem == 0){
-  return Padding(
-    padding: EdgeInsets.all(10),
-    child: Row(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: <Widget>[
-        Container(
-          width: 10,
-          height: 10,
-          decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(30), color: Color.fromARGB(255, 39, 109, 238)),
-        ),
-
-          Container(
-          margin: EdgeInsets.all(10),
-          width: 10,
-          height: 10,
-          decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(30), color: Colors.black),
-        ),
-
-        
-
-          Container(
-          width: 10,
-          height: 10,
-          decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(30), color: Colors.black),
-        ),
-
-       
-
-        
-      ],
-    ),
-  );
-} if (contagem == 1) {
-   return Padding(
-    padding: EdgeInsets.all(10),
-    child: Row(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: <Widget>[
-        Container(
-          width: 10,
-          height: 10,
-          decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(30), color: Colors.black),
-        ),
-
-          Container(
-          margin: EdgeInsets.all(10),
-          width: 10,
-          height: 10,
-          decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(30), color: Color.fromARGB(255, 39, 109, 238)),
-        ),
-
-          Container(
-          width: 10,
-          height: 10,
-          decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(30), color: Colors.black),
-        ),
-
-       
-      ],
-    ),
-  );
-} else {
-  return Padding(
-    padding: EdgeInsets.all(10),
-    child: Row(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: <Widget>[
-        Container(
-          width: 10,
-          height: 10,
-          decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(30), color: Colors.black),
-        ),
-
-          Container(
-          margin: EdgeInsets.all(10),
-          width: 10,
-          height: 10,
-          decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(30), color: Colors.black),
-        ),
-
-          Container(
-          width: 10,
-          height: 10,
-          decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(30), color: Color.fromARGB(255, 39, 109, 238)),
-
-              
-        ),
-
-        
-      ],
-    ),
-  );
-
-};
+    return balls3(contagem);
 }
 }
 
@@ -297,7 +162,7 @@ class _paginaSala2State extends State<paginaSala2> {
                 padding: EdgeInsets.symmetric(vertical: 60),
                 child: Image.asset(
                   retornaImagem1(contagem), // Aqui retorna a imagem
-                  width: 600,
+                  width: 450,
                 ),
               ),
             ),
@@ -537,7 +402,7 @@ class _paginaSala3State extends State<paginaSala3> {
                 padding: EdgeInsets.symmetric(vertical: 60),
                 child: Image.asset(
                   retornaImagem1(contagem), // Aqui retorna a imagem
-                  width: 600,
+                  width: 450,
                 ),
               ),
             ),
@@ -845,7 +710,7 @@ class _paginaSala4State extends State<paginaSala4> {
                 padding: EdgeInsets.symmetric(vertical: 60),
                 child: Image.asset(
                   retornaImagem1(contagem), // Aqui retorna a imagem
-                  width: 600,
+                  width: 450,
                 ),
               ),
             ),
@@ -1153,7 +1018,7 @@ class _paginaSala5State extends State<paginaSala5> {
                 padding: EdgeInsets.symmetric(vertical: 60),
                 child: Image.asset(
                   retornaImagem1(contagem), // Aqui retorna a imagem
-                  width: 600,
+                  width: 450,
                 ),
               ),
             ),
@@ -1460,7 +1325,7 @@ class _paginaSala6State extends State<paginaSala6> {
                 padding: EdgeInsets.symmetric(vertical: 60),
                 child: Image.asset(
                   retornaImagem1(contagem), // Aqui retorna a imagem
-                  width: 600,
+                  width: 450,
                 ),
               ),
             ),
@@ -1769,7 +1634,7 @@ class _paginaSala7State extends State<paginaSala7> {
                 padding: EdgeInsets.symmetric(vertical: 60),
                 child: Image.asset(
                   retornaImagem1(contagem), // Aqui retorna a imagem
-                  width: 600,
+                  width: 450,
                 ),
               ),
             ),
@@ -2030,6 +1895,230 @@ return Padding(
           decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(30), color: Color.fromARGB(255, 39, 109, 238)),
   ),
+      ],
+    ),
+  );
+
+
+};
+}
+}
+
+//========================================================Coodernação================================================================(Coord. de exatas)
+
+
+class salaCoodernacao extends StatefulWidget {
+  const salaCoodernacao({super.key});
+
+  @override
+  State<salaCoodernacao> createState() => _salaCoodernacaoState();
+}
+
+class _salaCoodernacaoState extends State<salaCoodernacao> {
+  int contagem = 0;
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        shadowColor: (Color.fromARGB(255, 29, 1, 1)),
+        title: Text(
+            'Siga o caminho verde no chão para chegar ao local desejado.',
+            overflow: TextOverflow.visible,
+            textScaleFactor: 0.85,
+            style: const TextStyle(fontWeight: FontWeight.bold)),
+      ),
+      body: SafeArea(
+        child: Column(
+          children: <Widget>[
+            balls1(contagem),    // aqui chama o design das bolinhas para mostrar em qual imagem está
+            
+            Container(
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(50),
+                color: Colors.blue,
+              ),
+              child: Padding(
+                padding: EdgeInsets.symmetric(vertical: 60),
+                child: Image.asset(
+                  retornaImagem1(contagem), // Aqui retorna a imagem
+                  width: 450,
+                ),
+              ),
+            ),
+            _setas(),
+          ],
+        ),
+      ),
+    );
+  }
+
+  Widget _setas() {
+    return Padding(
+      padding: EdgeInsets.symmetric(vertical: 0),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: <Widget>[
+          Container(
+            child: IconButton(
+                icon: Icon(Icons.arrow_circle_left_rounded),
+                iconSize: 50,
+                onPressed: () {
+                  setState(() {
+                    contagem--;
+                  });
+                }),
+          ),
+          Container(
+            child: IconButton(
+                icon: Icon(Icons.arrow_circle_right_rounded),
+                iconSize: 50,
+                onPressed: () {
+                  setState(() {
+                    contagem++;
+                  });
+                }),
+          ),
+        ],
+      ),
+    );
+  }
+
+  retornaImagem1(int contagem) {
+    if (contagem == 0) {
+      return 'assets/images/coor.png';
+    }
+    if (contagem == 1) {
+      return 'assets/images/coor2.png';
+    }
+    if (contagem <= 0) {
+      return 'assets/images/coor.png';
+    }
+    if (contagem >= 1) {
+      return 'assets/images/coor2.png';
+    }
+  }
+
+Widget balls1(int contagem) {
+
+  if (contagem <= -1) {
+    return Padding(
+    padding: EdgeInsets.all(10),
+    child: Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: <Widget>[
+        Container(
+          width: 10,
+          height: 10,
+          decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(30), color: Color.fromARGB(255, 39, 109, 238)),
+        ),
+
+          Container(
+          margin: EdgeInsets.all(10),
+          width: 10,
+          height: 10,
+          decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(30), color: Colors.black),
+        ),
+      ],
+    ),
+  );
+  } if(contagem == 0){
+  return Padding(
+    padding: EdgeInsets.all(10),
+    child: Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: <Widget>[
+        Container(
+          width: 10,
+          height: 10,
+          decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(30), color: Color.fromARGB(255, 39, 109, 238)),
+        ),
+
+          Container(
+          margin: EdgeInsets.all(10),
+          width: 10,
+          height: 10,
+          decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(30), color: Colors.black),
+        ),
+
+        
+      ],
+    ),
+  );
+} if (contagem == 1) {
+   return Padding(
+    padding: EdgeInsets.all(10),
+    child: Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: <Widget>[
+        Container(
+          width: 10,
+          height: 10,
+          decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(30), color: Colors.black),
+        ),
+
+          Container(
+          margin: EdgeInsets.all(10),
+          width: 10,
+          height: 10,
+          decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(30), color: Color.fromARGB(255, 39, 109, 238)),
+        ),
+
+      ],
+    ),
+  );
+}if (contagem >= 1) {
+   return Padding(
+    padding: EdgeInsets.all(10),
+    child: Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: <Widget>[
+        Container(
+          width: 10,
+          height: 10,
+          decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(30), color: Colors.black),
+        ),
+
+          Container(
+          margin: EdgeInsets.all(10),
+          width: 10,
+          height: 10,
+          decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(30), color: Color.fromARGB(255, 39, 109, 238)),
+        ),
+
+      ],
+    ),
+  );
+} else {
+return Padding(
+    padding: EdgeInsets.all(10),
+    child: Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: <Widget>[
+        Container(
+          width: 10,
+          height: 10,
+          decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(30), color: Colors.black),
+        ),
+
+          Container(
+          margin: EdgeInsets.all(10),
+          width: 10,
+          height: 10,
+          decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(30), color: Color.fromARGB(255, 39, 109, 238)),
+        ),
+
+    
       ],
     ),
   );

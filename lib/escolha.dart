@@ -18,6 +18,11 @@ class Escolha extends StatelessWidget {
       'Salas 4R',
 
     ),
+     Task(
+      'Coodernações',
+      '4R',
+
+    ),
   ];
 
 
@@ -100,6 +105,9 @@ redirecionarSala(int index)  {          //função para escolher entre laborató
     } if (index == 1){
 
       return 'salas';
+    } if (index == 2) {
+
+      return 'coordenação';
     }
 
 

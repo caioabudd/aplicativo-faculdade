@@ -1,84 +1,57 @@
 import 'dart:convert';
+import 'package:flutter_application_1/escolha.dart';
 import 'package:flutter_application_1/funcoes.dart';
 import 'package:http/http.dart' as http;
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/paginaSala.dart';
 import './taks.dart';
-
+import 'package:flutter_application_1/funcoes.dart';
+import './funcoes.dart';
+import './main.dart';
 
 final list = [
   Task(
-    'Laboratório Multidisciplinar 1 ',
+    'Coodernação de Exatas ',
     'Clique para entrar nas instruções',
   ),
-  Task(
-    'Laboratório Multidisciplinar 2 ',
-    'Clique para entrar nas instruções',
-  ),
-  Task(
-    'Laboratório de Informática 3 ',
-    'Clique para entrar nas instruções',
-  ),
- 
 ];
 
-class second extends StatefulWidget {
-  second({Key? key}) : super(key: key);
-
+class coodernacoes extends StatefulWidget {
+  coodernacoes({Key? key}) : super(key: key);
 
   @override
   _MyAppState createState() => _MyAppState();
 }
 
-class _MyAppState extends State<second> {
+class _MyAppState extends State<coodernacoes> {
   int _opcaoSelecionada = 0;
 
-  void remove(index) {
-    list.removeAt(index);
-  }
-
+  get result => null;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Center(child: Text("Salas 4R")),
-        actions: [
-          IconButton(
-            onPressed: () {
-              showSearch(
-                context: context,
-                delegate: CustomSearchDelegate(),
-              );
-            },
-            icon: const Icon(Icons.search),
-          ),
-        ],
-      ),
-      body: ListView.separated(
-        itemBuilder: (BuildContext context, int index) {
-          return ListTile(
-              title: Text(list[index].sala),
-              subtitle: Text(list[index].description),
-              onTap: () =>
-                  Navigator.of(context).pushNamed(Funcoes().redirecionar(index)));
-        },
-        separatorBuilder: (BuildContext context, int separatorIndex) {
-          return Divider();
-        },
-        itemCount: list.length,
-      ),
-    );
+        appBar: AppBar(
+          title: Center(child: Text("Salas 4R")),
+
+        ),
+        body: ListView(
+          children: <Widget>[
+            Card(
+                child: ListTile(
+              title: Text('Coodernação de Exatas'),
+              onTap: () {
+                Navigator.of(context).pushNamed('coordenacaoExatas');
+              },
+            )),
+          ],
+        ));
   }
 }
 
-
-
 class CustomSearchDelegate extends SearchDelegate {
   List<String> searchTerms = [
-    'Laboratório Multidisciplinar 1 ',
-    'Laboratório Multidisciplinar 2 ',
-    'Laboratório de Informática 3 ',
-    
+    'Sala 10 ',
+    'Sala 11 ',
   ];
 
   List<String> Terms = [
@@ -129,8 +102,8 @@ class CustomSearchDelegate extends SearchDelegate {
         var result = matchQuery[index];
         return ListTile(
             title: Text(result),
-            onTap: () =>
-                Navigator.of(context).pushNamed(Funcoes().mudaResultado(result, index)));
+            onTap: () => Navigator.of(context)
+                .pushNamed(Funcoes().mudaResultado(result, index)));
       },
       separatorBuilder: (BuildContext context, int index) {
         return Divider();
@@ -153,8 +126,8 @@ class CustomSearchDelegate extends SearchDelegate {
         var result = matchQuery[index];
         return ListTile(
             title: Text(result),
-            onTap: () =>
-                Navigator.of(context).pushNamed(Funcoes().mudaResultado(result, index)));
+            onTap: () => Navigator.of(context)
+                .pushNamed(Funcoes().mudaResultado(result, index)));
       },
       separatorBuilder: (BuildContext context, int index) {
         return Divider();
@@ -162,4 +135,3 @@ class CustomSearchDelegate extends SearchDelegate {
     );
   }
 }
-

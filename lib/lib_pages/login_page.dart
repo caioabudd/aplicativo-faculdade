@@ -3,6 +3,9 @@ import 'package:flutter/rendering.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter_application_1/auth_service.dart';
 import 'package:provider/provider.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:rflutter_alert/rflutter_alert.dart';
+
 
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
@@ -59,6 +62,8 @@ class _LoginPageState extends State<LoginPage> {
           .showSnackBar(SnackBar(content: Text(e.message)));
     }
   }
+
+ FirebaseAuth auth = FirebaseAuth.instance;
 
   @override
   Widget build(BuildContext context) {
@@ -150,6 +155,21 @@ class _LoginPageState extends State<LoginPage> {
                 TextButton(
                     onPressed: () => setFormAction(!isLogin),
                     child: Text(toggleButton)),
+                  Container(
+                      color: Colors.transparent,
+                      alignment: Alignment.center,
+                      child: InkWell(
+                        child: Text("Esqueceu a senha?", style: TextStyle(fontSize: 17, fontWeight: FontWeight.bold, color: Theme.of(context).primaryColor),),
+                        onTap: (){
+                          if(formKey.currentState!.validate()) {
+                          auth.sendPasswordResetEmail(email: email.text).then((value) {
+                              Alert(context: context, title: "Redefinição de senha", desc: "Uma mensagem foi enviada para seu.").show();
+                          }).catchError((e) => print(e.toString()));
+                           
+                          };
+                        },
+                      ),
+                  )
               ],
             ),
           ),
@@ -157,4 +177,6 @@ class _LoginPageState extends State<LoginPage> {
       ),
     );
   }
+
+
 }
